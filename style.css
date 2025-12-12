@@ -1,0 +1,305 @@
+/* Pengaturan Dasar */
+:root {
+  --primary-color: #0056b3; /* Biru gelap untuk brand */
+  --secondary-color: #f4f4f4; /* Abu-abu terang */
+  --text-color: #333;
+  --white: #fff;
+  --gap: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--white);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+
+.bg-light {
+  background-color: var(--secondary-color);
+}
+
+/* Header dan Navigasi */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle {
+  display: none; /* Sembunyikan di desktop */
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url('img/1.jpg') no-repeat center center/cover;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+}
+
+.hero-section .container {
+  z-index: 1;
+}
+
+.hero-section h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+/* Gambar Section */
+.section-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+/* Sejarah (Timeline) */
+.timeline {
+  border-left: 2px solid var(--primary-color);
+  padding-left: 20px;
+  position: relative;
+  margin-top: 30px;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: 3px solid var(--white);
+}
+
+/* Visi & Misi (Cards) */
+.card {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Direksi dan Tim */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap);
+  margin-top: var(--gap);
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid var(--primary-color);
+}
+
+.team-member h3 {
+  margin: 5px 0;
+}
+
+/* Produk atau Jasa */
+.product-list {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  margin-top: var(--gap);
+}
+
+.product-card {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  background-color: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Portofolio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--gap);
+  margin-top: var(--gap);
+}
+
+.portfolio-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-item h4,
+.portfolio-item p {
+  padding: 10px 15px;
+  margin: 0;
+  background-color: var(--white);
+}
+
+/* Kontak dan Alamat */
+.contact-info {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+.map-container {
+  height: 400px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+  header .container {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    width: 100%;
+    order: 3; /* Pindahkan navigasi ke bawah header */
+    display: none; /* Sembunyikan navigasi secara default */
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding-top: 10px;
+  }
+
+  nav ul li {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .menu-toggle {
+    display: block; /* Tampilkan tombol menu di mobile */
+  }
+
+  nav.active {
+    display: block; /* Tampilkan navigasi saat aktif */
+  }
+
+  .hero-section h2 {
+    font-size: 2em;
+  }
+
+  .product-list {
+    flex-direction: column;
+  }
+}
