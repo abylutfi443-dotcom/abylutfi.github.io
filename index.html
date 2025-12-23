@@ -6,251 +6,92 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Hiking Adventure - Pendaftaran Event</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <title>Company Profile Warnet</title>
     <link
       rel="stylesheet"
       href="style.css"
     />
   </head>
   <body>
-    <!-- Header Section -->
     <header>
-      <div class="container header-content">
-        <div class="logo">
-          <i class="fas fa-mountain"></i>
-          <span>Hiking Adventure</span>
-        </div>
-
-        <button
-          class="mobile-menu-btn"
-          id="mobileMenuBtn"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <nav
-          class="mobile-menu"
-          id="mobileMenu"
-        >
-          <ul>
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#event">Event</a></li>
-            <li><a href="#registration">Pendaftaran</a></li>
-          </ul>
-        </nav>
-      </div>
+      <h1>Warnet byyshikii</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#gallery">Galeri</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section
-      class="hero"
-      id="home"
-    >
-      <div class="container">
-        <h1>Petualangan Hiking Menanti!</h1>
-        <p>Bergabunglah dengan komunitas hiking kami dalam pendakian seru ke Gunung Merbabu. Rasakan pengalaman tak terlupakan bersama para pecinta alam.</p>
-        <a
-          href="#registration"
-          class="cta-button"
-          >Daftar Sekarang</a
-        >
+    <section id="about">
+      <h2>Tentang Kami</h2>
+      <p>Warnet byyshikii adalah tempat yang ideal untuk akses internet cepat dan nyaman, dengan berbagai layanan yang memenuhi kebutuhan Anda.</p>
+    </section>
+
+    <section id="services">
+      <h2>Layanan Kami</h2>
+      <ul>
+        <li>Akses Internet Cepat</li>
+        <li>Penyewaan Komputer</li>
+        <li>Print dan Scan</li>
+        <li>Game Online</li>
+        <li>Café dan Minuman Ringan</li>
+      </ul>
+    </section>
+
+    <section id="gallery">
+      <h2>Galeri</h2>
+      <div class="gallery-images">
+        <img
+          src="img/1.jpg"
+          alt="Gambar Warnet 1"
+        />
+        <img
+          src="img/2.jpg"
+          alt="Gambar Warnet 2"
+        />
+        <img
+          src="img/3.jpg"
+          alt="Gambar Warnet 3"
+        />
       </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="container">
-      <!-- Event Info Section -->
-      <section
-        class="event-info"
-        id="event"
-      >
-        <div class="info-card">
-          <i class="fas fa-calendar-alt"></i>
-          <h3>Tanggal & Waktu</h3>
-          <p>Sabtu-Minggu, 15-16 Januari 2026</p>
-          <p>Pukul 06:00 - Selesai</p>
-        </div>
+    <section id="contact">
+      <h2>Kontak Kami</h2>
+      <form id="contact-form">
+        <label for="name">Nama:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+        />
 
-        <div class="info-card">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Lokasi</h3>
-          <p>Gunung Merbabu, Jawa Tengah</p>
-          <p>Start Point: Basecamp Selo</p>
-        </div>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
 
-        <div class="info-card">
-          <i class="fas fa-users"></i>
-          <h3>Kapasitas Peserta</h3>
-          <p>Terbatas untuk 30 pendaki saja</p>
-          <p>Pendaftaran ditutup ketika kuota terpenuhi</p>
-        </div>
-      </section>
+        <label for="message">Pesan:</label>
+        <textarea
+          id="message"
+          name="message"
+          required
+        ></textarea>
 
-      <!-- Registration Form -->
-      <section
-        class="registration-section"
-        id="registration"
-      >
-        <h2 class="section-title">Formulir Pendaftaran</h2>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
 
-        <form id="registrationForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fullName">Nama Lengkap *</label>
-              <input
-                type="text"
-                id="fullName"
-                name="fullName"
-                required
-              />
-              <span
-                class="error-message"
-                id="fullNameError"
-              ></span>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-              />
-              <span
-                class="error-message"
-                id="emailError"
-              ></span>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Nomor Telepon *</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-              />
-              <span
-                class="error-message"
-                id="phoneError"
-              ></span>
-            </div>
-
-            <div class="form-group">
-              <label for="age">Usia *</label>
-              <input
-                type="number"
-                id="age"
-                name="age"
-                min="17"
-                max="60"
-                required
-              />
-              <span
-                class="error-message"
-                id="ageError"
-              ></span>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="experience">Pengalaman Hiking</label>
-              <select
-                id="experience"
-                name="experience"
-              >
-                <option value="pemula">Pemula</option>
-                <option value="menengah">Menengah</option>
-                <option value="berpengalaman">Berpengalaman</option>
-                <option value="expert">Expert</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="package">Paket Pendakian</label>
-              <select
-                id="package"
-                name="package"
-              >
-                <option value="reguler">Reguler (Rp 350.000)</option>
-                <option value="premium">Premium dengan Porter (Rp 550.000)</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="emergencyContact">Kontak Darurat *</label>
-            <input
-              type="text"
-              id="emergencyContact"
-              name="emergencyContact"
-              required
-              placeholder="Nama dan nomor telepon"
-            />
-            <span
-              class="error-message"
-              id="emergencyContactError"
-            ></span>
-          </div>
-
-          <div class="form-group">
-            <label for="healthInfo">Informasi Kesehatan</label>
-            <textarea
-              id="healthInfo"
-              name="healthInfo"
-              placeholder="Kondisi kesehatan khusus, alergi, atau informasi medis yang perlu kami ketahui"
-            ></textarea>
-          </div>
-
-          <div class="form-group">
-            <div class="checkbox-group">
-              <input
-                type="checkbox"
-                id="terms"
-                name="terms"
-                required
-              />
-              <label for="terms">Saya setuju dengan syarat dan ketentuan yang berlaku serta menyadari risiko kegiatan hiking</label>
-            </div>
-            <span
-              class="error-message"
-              id="termsError"
-            ></span>
-          </div>
-
-          <button
-            type="submit"
-            class="submit-btn"
-          >
-            Kirim Pendaftaran
-          </button>
-        </form>
-
-        <!-- Success Message (hidden by default) -->
-        <div
-          class="success-message"
-          id="successMessage"
-        >
-          <i class="fas fa-check-circle"></i>
-          <h3>Pendaftaran Berhasil!</h3>
-          <p>Terima kasih telah mendaftar. Kami akan menghubungi Anda melalui email dalam 1-2 hari kerja.</p>
-          <button
-            class="cta-button"
-            id="backToForm"
-          >
-            Daftar Lagi
-          </button>
-        </div>
-      </section>
-    </main>
+    <footer>
+      <p>© 2023 Warnet byyshikii. Semua Hak Dilindungi.</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
